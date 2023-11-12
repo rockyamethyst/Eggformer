@@ -315,6 +315,7 @@ collision_mask = 30
 safe_margin = 0.2
 script = ExtResource("1_nex0w")
 transitioner = NodePath("Transition")
+limit_right = -96
 
 [node name="camera" type="Camera2D" parent="."]
 position = Vector2(16, 0)

@@ -26,12 +26,12 @@ var checkpoint_pos: Vector2 = Vector2(0, 0)
 var current_checkpoint: int = -1
 
 func _ready():
-	$camera.limit_left = limit_right
+	$camera.limit_left = limit_right # SIM EU SEI QUE É CONFUSO MAS SÓ TEM EU TRABALHANDO NISSO.
 	$camera.limit_right = limit_of_right_map
 
 func undertalecosplay(_body):
 	can_has_death = true
-	respawn ()
+	respawn()
 
 
 func bonk():
