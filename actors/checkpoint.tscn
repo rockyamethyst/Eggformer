@@ -1,8 +1,8 @@
 [gd_scene load_steps=5 format=3 uid="uid://bcm15dfhhjtkc"]
 
-[ext_resource type="Texture2D" uid="uid://de15q24gqqu42" path="res://Assets/Mini FX, Items & UI/flag.png" id="1_6jycw"]
 [ext_resource type="Script" path="res://scripts/checkpoint.gd" id="1_rabf4"]
-[ext_resource type="Texture2D" uid="uid://d2pdmcbpkrm55" path="res://Assets/Mini FX, Items & UI/blue_flag.png" id="3_fdce6"]
+[ext_resource type="Texture2D" uid="uid://de15q24gqqu42" path="res://Assets/Mini FX, Items & UI/flag.png" id="2_xfo2w"]
+[ext_resource type="Texture2D" uid="uid://d2pdmcbpkrm55" path="res://Assets/Mini FX, Items & UI/blue_flag.png" id="3_xt5lo"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_y2vlg"]
 size = Vector2(16, 80)
@@ -20,12 +20,12 @@ shape = SubResource("RectangleShape2D_y2vlg")
 [node name="Red_flag" type="Sprite2D" parent="Area2D"]
 position = Vector2(0, 0.16)
 scale = Vector2(0.008, 0.00816667)
-texture = ExtResource("1_6jycw")
+texture = ExtResource("2_xfo2w")
 
 [node name="BlueFlag" type="Sprite2D" parent="Area2D"]
 visible = false
 position = Vector2(0, 0.16)
 scale = Vector2(0.008, 0.00816667)
-texture = ExtResource("3_fdce6")
+texture = ExtResource("3_xt5lo")
 
 [connection signal="body_entered" from="Area2D" to="." method="_on_checkpoint_touched"]

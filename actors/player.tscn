@@ -1,150 +1,149 @@
-[gd_scene load_steps=65 format=3 uid="uid://di05b8wefwdn1"]
+[gd_scene load_steps=64 format=3 uid="uid://di05b8wefwdn1"]
 
 [ext_resource type="Script" path="res://scripts/recruta.gd" id="1_nex0w"]
-[ext_resource type="Texture2D" uid="uid://b0bi706foqnim" path="res://Assets/Sprite Pack 6/1 - Penguin/Hurt (16 x 16).png" id="2_d8vyy"]
-[ext_resource type="Texture2D" uid="uid://brgnem7t3b8om" path="res://Assets/Sprite Pack 6/1 - Penguin/Idle (16 x 16).png" id="2_trxvk"]
-[ext_resource type="Texture2D" uid="uid://dd8ml68wfbvwm" path="res://Assets/Sprite Pack 6/1 - Penguin/Falling (16 x 16).png" id="2_uu7tr"]
-[ext_resource type="Material" uid="uid://chwjcwn1xrx31" path="res://shaders/JitterFreePixelArt.tres" id="2_xfiip"]
-[ext_resource type="Texture2D" uid="uid://bnry755srh8oc" path="res://Assets/Sprite Pack 6/1 - Penguin/Jump (16 x 16).png" id="3_a207l"]
-[ext_resource type="Texture2D" uid="uid://syee7l6bsxi2" path="res://Assets/Sprite Pack 6/1 - Penguin/Looking_Up (16 x 16).png" id="4_6iufj"]
-[ext_resource type="Texture2D" uid="uid://ddiveuksa1mtd" path="res://Assets/Sprite Pack 6/1 - Penguin/Ducking (16 x 16).png" id="4_6pqw8"]
-[ext_resource type="Texture2D" uid="uid://c657yi4k53ku4" path="res://Assets/Sprite Pack 6/1 - Penguin/Belly_Sliding (16 x 16).png" id="4_ogsnm"]
-[ext_resource type="Texture2D" uid="uid://7f54mdkhvslo" path="res://Assets/Sprite Pack 6/1 - Penguin/Waddling (16 x 16).png" id="5_ifqax"]
-[ext_resource type="Texture2D" uid="uid://caiaflyvuvq45" path="res://Assets/Sprite Pack 6/1 - Penguin/Lying_On_Ground (16 x 16).png" id="6_nytuq"]
-[ext_resource type="Texture2D" uid="uid://b03rmtyorhu1b" path="res://Assets/Sprite Pack 6/1 - Penguin/Sitting (16 x 16).png" id="7_gxh3b"]
+[ext_resource type="Texture2D" uid="uid://dd8ml68wfbvwm" path="res://Assets/Sprite Pack 6/1 - Penguin/Falling (16 x 16).png" id="2_bo2kt"]
+[ext_resource type="Texture2D" uid="uid://b0bi706foqnim" path="res://Assets/Sprite Pack 6/1 - Penguin/Hurt (16 x 16).png" id="3_jkxrg"]
+[ext_resource type="Texture2D" uid="uid://brgnem7t3b8om" path="res://Assets/Sprite Pack 6/1 - Penguin/Idle (16 x 16).png" id="4_x3jax"]
+[ext_resource type="Texture2D" uid="uid://bnry755srh8oc" path="res://Assets/Sprite Pack 6/1 - Penguin/Jump (16 x 16).png" id="5_kbh4n"]
+[ext_resource type="Texture2D" uid="uid://ddiveuksa1mtd" path="res://Assets/Sprite Pack 6/1 - Penguin/Ducking (16 x 16).png" id="6_xavlf"]
 [ext_resource type="AudioStream" uid="uid://kjo7rahtdhau" path="res://sounds/jump.wav" id="7_ntcgv"]
-[ext_resource type="Texture2D" uid="uid://cncw8ktelwlvc" path="res://Assets/Sprite Pack 6/1 - Penguin/Standing (16 x 16).png" id="8_7mo07"]
-[ext_resource type="Texture2D" uid="uid://coedxbyud5r0p" path="res://Assets/Controls/CircleUp.png" id="9_bhl5l"]
-[ext_resource type="Texture2D" uid="uid://cwu6yl65glw1u" path="res://Assets/Controls/CircleDown.png" id="10_nx0li"]
-[ext_resource type="Texture2D" uid="uid://du04p42txiytj" path="res://Assets/Controls/Arrow1.png" id="11_ban1h"]
-[ext_resource type="Texture2D" uid="uid://bu16v3dsblb76" path="res://Assets/Sprite Pack 6/1 - Penguin/victory with left.png" id="12_3ngsd"]
-[ext_resource type="Texture2D" uid="uid://cq50ybsx0mhx3" path="res://Assets/Controls/Arrow1Pressed.png" id="12_8r2ub"]
-[ext_resource type="Texture2D" uid="uid://d4gseouxnsyys" path="res://Assets/Controls/Arrow3.png" id="13_t6hcr"]
-[ext_resource type="Texture2D" uid="uid://bc1xkpy4ree77" path="res://Assets/Controls/Arrow4Pressed.png" id="14_da3et"]
-[ext_resource type="Texture2D" uid="uid://bo3rgp1ikbmwk" path="res://Assets/Controls/Arrow3Pressed.png" id="14_frthv"]
-[ext_resource type="Texture2D" uid="uid://bsxwke7h4n2i0" path="res://Assets/Controls/Arrow4.png" id="15_oab05"]
-[ext_resource type="Texture2D" uid="uid://cjal86aikegc3" path="res://Assets/Controls/Arrow2.png" id="16_l48dn"]
-[ext_resource type="Texture2D" uid="uid://dmngwi6a407ax" path="res://Assets/Controls/Arrow2Pressed.png" id="17_ennhl"]
+[ext_resource type="Texture2D" uid="uid://syee7l6bsxi2" path="res://Assets/Sprite Pack 6/1 - Penguin/Looking_Up (16 x 16).png" id="7_o44rh"]
+[ext_resource type="Texture2D" uid="uid://caiaflyvuvq45" path="res://Assets/Sprite Pack 6/1 - Penguin/Lying_On_Ground (16 x 16).png" id="8_r3e8s"]
+[ext_resource type="Texture2D" uid="uid://b03rmtyorhu1b" path="res://Assets/Sprite Pack 6/1 - Penguin/Sitting (16 x 16).png" id="9_oh431"]
+[ext_resource type="Texture2D" uid="uid://cncw8ktelwlvc" path="res://Assets/Sprite Pack 6/1 - Penguin/Standing (16 x 16).png" id="10_h3ybx"]
+[ext_resource type="Texture2D" uid="uid://c657yi4k53ku4" path="res://Assets/Sprite Pack 6/1 - Penguin/Belly_Sliding (16 x 16).png" id="11_0yhtf"]
+[ext_resource type="Texture2D" uid="uid://bu16v3dsblb76" path="res://Assets/Sprite Pack 6/1 - Penguin/victory with left.png" id="12_pkh4y"]
+[ext_resource type="Texture2D" uid="uid://7f54mdkhvslo" path="res://Assets/Sprite Pack 6/1 - Penguin/Waddling (16 x 16).png" id="13_miqua"]
+[ext_resource type="Texture2D" uid="uid://du04p42txiytj" path="res://Assets/Controls/Arrow1.png" id="16_yp1fp"]
+[ext_resource type="Texture2D" uid="uid://cq50ybsx0mhx3" path="res://Assets/Controls/Arrow1Pressed.png" id="17_ajjan"]
+[ext_resource type="Texture2D" uid="uid://d4gseouxnsyys" path="res://Assets/Controls/Arrow3.png" id="18_3gpow"]
+[ext_resource type="Texture2D" uid="uid://bo3rgp1ikbmwk" path="res://Assets/Controls/Arrow3Pressed.png" id="19_nvd57"]
+[ext_resource type="Texture2D" uid="uid://bsxwke7h4n2i0" path="res://Assets/Controls/Arrow4.png" id="20_vip80"]
+[ext_resource type="Texture2D" uid="uid://bc1xkpy4ree77" path="res://Assets/Controls/Arrow4Pressed.png" id="21_c37kr"]
 [ext_resource type="PackedScene" uid="uid://vq54cqsxnuri" path="res://actors/Transition.tscn" id="22_mhlup"]
+[ext_resource type="Texture2D" uid="uid://cjal86aikegc3" path="res://Assets/Controls/Arrow2.png" id="22_ut4ht"]
+[ext_resource type="Texture2D" uid="uid://dmngwi6a407ax" path="res://Assets/Controls/Arrow2Pressed.png" id="23_xom0n"]
+[ext_resource type="Texture2D" uid="uid://coedxbyud5r0p" path="res://Assets/Controls/CircleUp.png" id="24_a7kba"]
+[ext_resource type="Texture2D" uid="uid://cwu6yl65glw1u" path="res://Assets/Controls/CircleDown.png" id="25_mxlnm"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_p3etr"]
-atlas = ExtResource("2_uu7tr")
+atlas = ExtResource("2_bo2kt")
 region = Rect2(0, 0, 16, 16)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_id334"]
-atlas = ExtResource("2_d8vyy")
+atlas = ExtResource("3_jkxrg")
 region = Rect2(0, 0, 16, 16)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_31aq3"]
-atlas = ExtResource("2_trxvk")
+atlas = ExtResource("4_x3jax")
 region = Rect2(0, 0, 16, 16)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_japvs"]
-atlas = ExtResource("2_trxvk")
+atlas = ExtResource("4_x3jax")
 region = Rect2(16, 0, 16, 16)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_sijue"]
-atlas = ExtResource("2_trxvk")
+atlas = ExtResource("4_x3jax")
 region = Rect2(32, 0, 16, 16)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_bb6u1"]
-atlas = ExtResource("2_trxvk")
+atlas = ExtResource("4_x3jax")
 region = Rect2(48, 0, 16, 16)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_drij4"]
-atlas = ExtResource("2_trxvk")
+atlas = ExtResource("4_x3jax")
 region = Rect2(64, 0, 16, 16)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_dfiwn"]
-atlas = ExtResource("3_a207l")
+atlas = ExtResource("5_kbh4n")
 region = Rect2(0, 0, 16, 16)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_xu4nj"]
-atlas = ExtResource("4_6pqw8")
+atlas = ExtResource("6_xavlf")
 region = Rect2(0, 0, 16, 16)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_42rv8"]
-atlas = ExtResource("4_6iufj")
+atlas = ExtResource("7_o44rh")
 region = Rect2(0, 0, 16, 16)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_y1cod"]
-atlas = ExtResource("4_6iufj")
+atlas = ExtResource("7_o44rh")
 region = Rect2(16, 0, 16, 16)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_512m6"]
-atlas = ExtResource("6_nytuq")
+atlas = ExtResource("8_r3e8s")
 region = Rect2(0, 0, 16, 16)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_k2im0"]
-atlas = ExtResource("7_gxh3b")
+atlas = ExtResource("9_oh431")
 region = Rect2(0, 0, 16, 16)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_4hebu"]
-atlas = ExtResource("7_gxh3b")
+atlas = ExtResource("9_oh431")
 region = Rect2(16, 0, 16, 16)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_o0ikf"]
-atlas = ExtResource("8_7mo07")
+atlas = ExtResource("10_h3ybx")
 region = Rect2(0, 0, 16, 16)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_8hx4l"]
-atlas = ExtResource("4_ogsnm")
+atlas = ExtResource("11_0yhtf")
 region = Rect2(0, 0, 16, 16)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_35r8t"]
-atlas = ExtResource("4_ogsnm")
+atlas = ExtResource("11_0yhtf")
 region = Rect2(16, 0, 16, 16)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_x41g4"]
-atlas = ExtResource("4_ogsnm")
+atlas = ExtResource("11_0yhtf")
 region = Rect2(32, 0, 16, 16)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_1kaht"]
-atlas = ExtResource("12_3ngsd")
+atlas = ExtResource("12_pkh4y")
 region = Rect2(0, 0, 16, 16)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_2b5kc"]
-atlas = ExtResource("12_3ngsd")
+atlas = ExtResource("12_pkh4y")
 region = Rect2(16, 0, 16, 16)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_6k7o5"]
-atlas = ExtResource("12_3ngsd")
+atlas = ExtResource("12_pkh4y")
 region = Rect2(32, 0, 16, 16)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_f2873"]
-atlas = ExtResource("12_3ngsd")
+atlas = ExtResource("12_pkh4y")
 region = Rect2(48, 0, 16, 16)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_yvf3t"]
-atlas = ExtResource("12_3ngsd")
+atlas = ExtResource("12_pkh4y")
 region = Rect2(64, 0, 16, 16)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_3pl41"]
-atlas = ExtResource("12_3ngsd")
+atlas = ExtResource("12_pkh4y")
 region = Rect2(80, 0, 16, 16)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_4ggx6"]
-atlas = ExtResource("5_ifqax")
+atlas = ExtResource("13_miqua")
 region = Rect2(0, 0, 16, 16)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_iq81n"]
-atlas = ExtResource("5_ifqax")
+atlas = ExtResource("13_miqua")
 region = Rect2(16, 0, 16, 16)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_tg6ma"]
-atlas = ExtResource("5_ifqax")
+atlas = ExtResource("13_miqua")
 region = Rect2(32, 0, 16, 16)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_w3toh"]
-atlas = ExtResource("5_ifqax")
+atlas = ExtResource("13_miqua")
 region = Rect2(48, 0, 16, 16)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_dcgab"]
-atlas = ExtResource("5_ifqax")
+atlas = ExtResource("13_miqua")
 region = Rect2(64, 0, 16, 16)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_yogsl"]
-atlas = ExtResource("5_ifqax")
+atlas = ExtResource("13_miqua")
 region = Rect2(80, 0, 16, 16)
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_137k1"]
@@ -161,7 +160,7 @@ animations = [{
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_id334")
 }],
-"loop": false,
+"loop": true,
 "name": &"hurt",
 "speed": 5.0
 }, {
@@ -319,7 +318,7 @@ transitioner = NodePath("Transition")
 
 [node name="camera" type="Camera2D" parent="."]
 position = Vector2(16, 0)
-zoom = Vector2(1.8, 1.8)
+zoom = Vector2(2, 2)
 limit_left = -96
 limit_smoothed = true
 position_smoothing_enabled = true
@@ -329,9 +328,8 @@ metadata/_edit_lock_ = true
 [node name="anim" type="AnimatedSprite2D" parent="."]
 light_mask = 2
 visibility_layer = 29
-material = ExtResource("2_xfiip")
 sprite_frames = SubResource("SpriteFrames_137k1")
-animation = &"look_up"
+animation = &"hurt"
 autoplay = "respawn"
 metadata/_edit_lock_ = true
 
@@ -358,63 +356,72 @@ offset_right = 260.0
 offset_bottom = 99.0
 scene_switch = "fade_in"
 
-[node name="CanvasLayer" type="CanvasLayer" parent="."]
+[node name="Control" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 12
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 0
+
+[node name="CanvasLayer" type="CanvasLayer" parent="Control"]
 layer = 4
 
-[node name="UpButton" type="TouchScreenButton" parent="CanvasLayer"]
+[node name="UpButton" type="TouchScreenButton" parent="Control/CanvasLayer"]
 self_modulate = Color(1, 1, 1, 0.654902)
 texture_filter = 1
 position = Vector2(78, 210)
 scale = Vector2(5, 4.749)
-texture_normal = ExtResource("11_ban1h")
-texture_pressed = ExtResource("12_8r2ub")
+texture_normal = ExtResource("16_yp1fp")
+texture_pressed = ExtResource("17_ajjan")
 shape = SubResource("RectangleShape2D_rkudi")
 passby_press = true
 action = "peng_up"
 visibility_mode = 1
 
-[node name="DownButton" type="TouchScreenButton" parent="CanvasLayer"]
+[node name="DownButton" type="TouchScreenButton" parent="Control/CanvasLayer"]
 self_modulate = Color(1, 1, 1, 0.654902)
 texture_filter = 1
 position = Vector2(78, 271)
 scale = Vector2(5, 4.749)
-texture_normal = ExtResource("13_t6hcr")
-texture_pressed = ExtResource("14_frthv")
+texture_normal = ExtResource("18_3gpow")
+texture_pressed = ExtResource("19_nvd57")
 shape = SubResource("RectangleShape2D_qqiyr")
 passby_press = true
 action = "peng_down"
 visibility_mode = 1
 
-[node name="LeftButton" type="TouchScreenButton" parent="CanvasLayer"]
+[node name="LeftButton" type="TouchScreenButton" parent="Control/CanvasLayer"]
 self_modulate = Color(1, 1, 1, 0.654902)
 texture_filter = 1
 position = Vector2(28, 252)
 scale = Vector2(5, 4.749)
-texture_normal = ExtResource("15_oab05")
-texture_pressed = ExtResource("14_da3et")
+texture_normal = ExtResource("20_vip80")
+texture_pressed = ExtResource("21_c37kr")
 shape = SubResource("RectangleShape2D_3xn5f")
 passby_press = true
 action = "peng_left"
 visibility_mode = 1
 
-[node name="RightButton" type="TouchScreenButton" parent="CanvasLayer"]
+[node name="RightButton" type="TouchScreenButton" parent="Control/CanvasLayer"]
 self_modulate = Color(1, 1, 1, 0.654902)
 texture_filter = 1
 position = Vector2(103, 252)
 scale = Vector2(5, 4.749)
-texture_normal = ExtResource("16_l48dn")
-texture_pressed = ExtResource("17_ennhl")
+texture_normal = ExtResource("22_ut4ht")
+texture_pressed = ExtResource("23_xom0n")
 shape = SubResource("RectangleShape2D_fke7n")
 passby_press = true
 action = "peng_right"
 visibility_mode = 1
 
-[node name="TouchScreenButton" type="TouchScreenButton" parent="CanvasLayer"]
+[node name="TouchScreenButton" type="TouchScreenButton" parent="Control/CanvasLayer"]
 self_modulate = Color(1, 1, 1, 0.654902)
 position = Vector2(507, 222)
 scale = Vector2(6.5, 6.5)
-texture_normal = ExtResource("9_bhl5l")
-texture_pressed = ExtResource("10_nx0li")
+texture_normal = ExtResource("24_a7kba")
+texture_pressed = ExtResource("25_mxlnm")
 shape = SubResource("CircleShape2D_sxy25")
 passby_press = true
 action = "peng_jump"

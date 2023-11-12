@@ -7,10 +7,14 @@ const JUMP_VELOCITY = -250.0
 @onready var spawn_pos = recruta.position
 @onready var flip_zone = get_node("/root/World/Flip Zone")
 @export var transitioner : Transitioner
+@export var limit_left = 0
+@export var limit_right = 0
+@export var limit_of_right_map = 0
+@export var limit_of_left_map = 0
 
 
-var gravity = ProjectSettings.get_setting("physics/2d/default_gravity")
 var can_has_death := true
+var gravity = ProjectSettings.get_setting("physics/2d/default_gravity")
 var is_sliding = 0
 var is_jumping := false 
 var slide_direction = 0
@@ -21,12 +25,17 @@ var has_checkpoint = false
 var checkpoint_pos: Vector2 = Vector2(0, 0)
 var current_checkpoint: int = -1
 
+func _ready():
+	$camera.limit_left = limit_right
+	$camera.limit_right = limit_of_right_map
+
 func undertalecosplay(_body):
 	can_has_death = true
-	respawn()
+	respawn ()
 
 
 func bonk():
+	recruta.play("hurt")
 	velocity.y = 0
 	velocity.x = 0
 	velocity.y = -300
@@ -34,18 +43,17 @@ func bonk():
 	bonkd = true
 	if velocity.y == 0:
 		can_has_death = true
-		respawn()
+		bonk()
 	
-	recruta.play("hurt")
 
 
 func respawn():
 	if LeftSideOfMap:
-		$camera.limit_left = -10000000
-		$camera.limit_right = -96
+		$camera.limit_left = limit_of_left_map
+		$camera.limit_right = limit_right
 	else:
-		$camera.limit_left = -96
-		$camera.limit_right = 3488
+		$camera.limit_left = limit_right
+		$camera.limit_right = limit_of_right_map
 	if(has_checkpoint):
 		position = checkpoint_pos
 		recruta.play("respawn")
@@ -135,5 +143,5 @@ func sliding():
 	recruta.play("slide")
 
 
-func YES_I_KNOW_ITS_JANK_BUT_IT_WILL_DO(body):
+func YES_I_KNOW_ITS_JANK_BUT_IT_WILL_DO(_body):
 	get_tree().change_scene_to_packed(load("res://levels/Level2.tscn"))
