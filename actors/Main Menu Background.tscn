@@ -1,0 +1,16 @@
+[gd_scene load_steps=3 format=3 uid="uid://bwgi3acx4rdxh"]
+
+[ext_resource type="Script" path="res://scripts/ParallaxBackground.gd" id="1_3lujg"]
+[ext_resource type="Texture2D" uid="uid://b1kugiiyte1bj" path="res://Assets/Seasonal Tilesets/4 - Winter World/Background parts/StaticBG356.png" id="2_t10wr"]
+
+[node name="ParallaxBackground" type="ParallaxBackground"]
+script = ExtResource("1_3lujg")
+
+[node name="ParallaxLayer" type="ParallaxLayer" parent="."]
+motion_mirroring = Vector2(524, 0)
+
+[node name="StaticBg356" type="Sprite2D" parent="ParallaxLayer"]
+texture_filter = 6
+position = Vector2(320, 180)
+scale = Vector2(1.81818, 1.73077)
+texture = ExtResource("2_t10wr")

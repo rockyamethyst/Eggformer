@@ -1,0 +1,25 @@
+[gd_scene load_steps=4 format=3 uid="uid://dieubypn3kivl"]
+
+[ext_resource type="Texture2D" uid="uid://uujq83c24wqm" path="res://Assets/Hazards/Ceiling Trap - Level 1.png" id="1_i84ue"]
+[ext_resource type="Script" path="res://scripts/spikes.gd" id="1_lf4ri"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_2117u"]
+size = Vector2(12.8314, 4.91204)
+
+[node name="spikes" type="Area2D"]
+collision_layer = 4
+script = ExtResource("1_lf4ri")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+light_mask = 4
+visibility_layer = 2
+position = Vector2(-0.0617898, 0.0505137)
+shape = SubResource("RectangleShape2D_2117u")
+
+[node name="sprait" type="Sprite2D" parent="."]
+rotation = 3.14159
+texture = ExtResource("1_i84ue")
+region_enabled = true
+region_rect = Rect2(336, 49, 13, 5)
+
+[connection signal="body_entered" from="." to="." method="_on_spike_entered"]

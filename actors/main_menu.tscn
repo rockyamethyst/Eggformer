@@ -1,0 +1,138 @@
+[gd_scene load_steps=16 format=3 uid="uid://cxyih5notumgl"]
+
+[ext_resource type="Script" path="res://scripts/MainMenu.gd" id="1_law10"]
+[ext_resource type="Texture2D" uid="uid://cmudt7s5wf1yo" path="res://Assets/Mini FX, Items & UI/GUIButtons/Menu Frame Middle.png" id="2_8xvvc"]
+[ext_resource type="PackedScene" uid="uid://bwgi3acx4rdxh" path="res://actors/Main Menu Background.tscn" id="2_y4buy"]
+[ext_resource type="Texture2D" uid="uid://e7dktyt5acdl" path="res://Assets/Mini FX, Items & UI/GUIButtons/Menu Frame Bottom.png" id="3_rqlfh"]
+[ext_resource type="Texture2D" uid="uid://by015cijas1ri" path="res://Assets/Mini FX, Items & UI/GUIButtons/Menu Frame Top.png" id="4_e0doy"]
+[ext_resource type="Texture2D" uid="uid://c3ump0r0a8731" path="res://Assets/Mini FX, Items & UI/GUIButtons/MenuButton Unpressed.png" id="5_225ff"]
+[ext_resource type="Texture2D" uid="uid://c5lu7ive2usv1" path="res://Assets/Mini FX, Items & UI/GUIButtons/MenuButton Pressed.png" id="6_eoxt5"]
+[ext_resource type="Texture2D" uid="uid://074ynr8bg8r0" path="res://Assets/Mini FX, Items & UI/GUIButtons/Start Button Text.png" id="7_t6tgx"]
+[ext_resource type="Texture2D" uid="uid://bg8ls6m7phagy" path="res://Assets/Mini FX, Items & UI/GUIButtons/Options Button Text.png" id="8_udqbl"]
+[ext_resource type="Texture2D" uid="uid://cnaj88pj50yad" path="res://Assets/Mini FX, Items & UI/GUIButtons/Exit Button Text.png" id="9_krtax"]
+[ext_resource type="Texture2D" uid="uid://bn2hxkdl48w8r" path="res://Assets/image.png" id="11_seksg"]
+[ext_resource type="PackedScene" uid="uid://vq54cqsxnuri" path="res://actors/Transition.tscn" id="12_yckk2"]
+[ext_resource type="PackedScene" uid="uid://1oacpikk2nuc" path="res://levels/level1.tscn" id="13_vvxr3"]
+[ext_resource type="AudioStream" uid="uid://b84htii0bg6q1" path="res://sounds/music/Another Winter.mp3" id="14_hxbot"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_eo65x"]
+size = Vector2(30, 14)
+
+[node name="MainMenu" type="Control" node_paths=PackedStringArray("transitioner")]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+script = ExtResource("1_law10")
+transitioner = NodePath("VBoxContainer/Transition")
+
+[node name="QuitButtonPCJANKYYY" type="Button" parent="."]
+layout_mode = 0
+offset_left = 285.0
+offset_top = 260.0
+offset_right = 357.0
+offset_bottom = 295.0
+text = "⠀⠀⠀⠀⠀"
+
+[node name="OptionsButtonPCJANKYYY" type="Button" parent="."]
+layout_mode = 0
+offset_left = 284.0
+offset_top = 213.0
+offset_right = 356.0
+offset_bottom = 248.0
+text = "⠀⠀⠀⠀⠀"
+
+[node name="StartButtonPCJANKYYY" type="Button" parent="."]
+layout_mode = 0
+offset_left = 284.0
+offset_top = 164.0
+offset_right = 355.0
+offset_bottom = 195.0
+text = "⠀⠀⠀⠀⠀"
+
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+grow_horizontal = 2
+grow_vertical = 2
+alignment = 1
+
+[node name="ParallaxBackground" parent="VBoxContainer" instance=ExtResource("2_y4buy")]
+
+[node name="MenuFrameMiddle" type="Sprite2D" parent="VBoxContainer"]
+position = Vector2(0, 53.25)
+scale = Vector2(3.56818, 7)
+texture = ExtResource("2_8xvvc")
+
+[node name="MenuFrameBottom" type="Sprite2D" parent="VBoxContainer/MenuFrameMiddle"]
+position = Vector2(0, 10)
+scale = Vector2(1, 0.5)
+texture = ExtResource("3_rqlfh")
+
+[node name="MenuFrameTop" type="Sprite2D" parent="VBoxContainer/MenuFrameMiddle"]
+position = Vector2(0, -10.2857)
+scale = Vector2(1, 0.5)
+texture = ExtResource("4_e0doy")
+
+[node name="OptionsButton" type="TouchScreenButton" parent="VBoxContainer/MenuFrameMiddle"]
+position = Vector2(-10.6497, -3)
+scale = Vector2(0.700637, 0.357143)
+texture_normal = ExtResource("5_225ff")
+texture_pressed = ExtResource("6_eoxt5")
+shape = SubResource("RectangleShape2D_eo65x")
+
+[node name="OptionsButtonText" type="Sprite2D" parent="VBoxContainer/MenuFrameMiddle/OptionsButton"]
+position = Vector2(15, 6)
+texture = ExtResource("8_udqbl")
+
+[node name="QuitButton" type="TouchScreenButton" parent="VBoxContainer/MenuFrameMiddle"]
+position = Vector2(-10.3694, 3.71429)
+scale = Vector2(0.700637, 0.350286)
+texture_normal = ExtResource("5_225ff")
+texture_pressed = ExtResource("6_eoxt5")
+shape = SubResource("RectangleShape2D_eo65x")
+
+[node name="ExitButtonText" type="Sprite2D" parent="VBoxContainer/MenuFrameMiddle/QuitButton"]
+position = Vector2(14, 6)
+scale = Vector2(1, 1.02)
+texture = ExtResource("9_krtax")
+
+[node name="StartButton" type="TouchScreenButton" parent="VBoxContainer/MenuFrameMiddle"]
+position = Vector2(-10.6497, -10)
+scale = Vector2(0.700637, 0.357143)
+texture_normal = ExtResource("5_225ff")
+texture_pressed = ExtResource("6_eoxt5")
+shape = SubResource("RectangleShape2D_eo65x")
+
+[node name="StartButtonText" type="Sprite2D" parent="VBoxContainer/MenuFrameMiddle/StartButton"]
+position = Vector2(15, 6)
+scale = Vector2(1.2, 1.2)
+texture = ExtResource("7_t6tgx")
+
+[node name="Logo" type="Sprite2D" parent="VBoxContainer/MenuFrameMiddle"]
+position = Vector2(2.24203, -23.0357)
+scale = Vector2(0.0580823, 0.0256657)
+texture = ExtResource("11_seksg")
+
+[node name="Transition" parent="VBoxContainer" instance=ExtResource("12_yckk2")]
+layout_mode = 2
+scene_to_load = ExtResource("13_vvxr3")
+
+[node name="Title SOng" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("14_hxbot")
+autoplay = true
+
+[connection signal="pressed" from="QuitButtonPCJANKYYY" to="." method="_on_quit_button_pressed"]
+[connection signal="pressed" from="OptionsButtonPCJANKYYY" to="." method="_on_options_button_pressed"]
+[connection signal="pressed" from="StartButtonPCJANKYYY" to="." method="_on_start_button_pressed"]
+[connection signal="pressed" from="VBoxContainer/MenuFrameMiddle/OptionsButton" to="." method="_on_options_button_pressed"]
+[connection signal="pressed" from="VBoxContainer/MenuFrameMiddle/QuitButton" to="." method="_on_quit_button_pressed"]
+[connection signal="pressed" from="VBoxContainer/MenuFrameMiddle/StartButton" to="." method="_on_start_button_pressed"]

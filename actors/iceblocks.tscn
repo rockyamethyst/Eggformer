@@ -1,0 +1,30 @@
+[gd_scene load_steps=5 format=3 uid="uid://c17s08avim8l5"]
+
+[ext_resource type="Script" path="res://scripts/iceblocks.gd" id="1_8ux60"]
+[ext_resource type="Texture2D" uid="uid://bl0m670r14rpp" path="res://Assets/Seasonal Tilesets/5 - Misc. universal tiles/five_ice_blocks.png" id="1_c4sid"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_k88mk"]
+size = Vector2(80, 16)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_3vqm1"]
+size = Vector2(80, 12)
+
+[node name="one_ice_block" type="StaticBody2D"]
+collision_layer = 2
+script = ExtResource("1_8ux60")
+
+[node name="FiveIceBlocks" type="Sprite2D" parent="."]
+texture = ExtResource("1_c4sid")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("RectangleShape2D_k88mk")
+
+[node name="Area2D" type="Area2D" parent="."]
+collision_layer = 2
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+position = Vector2(0, -14)
+shape = SubResource("RectangleShape2D_3vqm1")
+
+[connection signal="body_entered" from="Area2D" to="." method="_on_slide_entered"]
+[connection signal="body_exited" from="Area2D" to="." method="_on_slide_exited"]
