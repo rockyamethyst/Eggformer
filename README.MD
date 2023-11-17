@@ -2,9 +2,8 @@
 <img src="/Assets/image.png" width="410"/>
 </p>
 
-<p align="center">
 PT-BR | [EN-US](docs/english.md)
-</p>
+
 
 
 # <p style="text-align: center;">Finalidade:</p>
