@@ -260,6 +260,24 @@ animations = [{
 }, {
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_3pl41")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_2b5kc")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_6k7o5")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_f2873")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_yvf3t")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_2b5kc")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_1kaht")
 }],
 "loop": false,
 "name": &"victory",
@@ -330,8 +348,10 @@ metadata/_edit_lock_ = true
 light_mask = 2
 visibility_layer = 29
 sprite_frames = SubResource("SpriteFrames_137k1")
-animation = &"hurt"
+animation = &"victory"
 autoplay = "respawn"
+frame = 11
+frame_progress = 1.0
 metadata/_edit_lock_ = true
 
 [node name="collision" type="CollisionShape2D" parent="."]

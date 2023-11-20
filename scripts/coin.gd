@@ -1,6 +1,6 @@
 extends Area2D
 @onready var texture := $anim as AnimatedSprite2D
-
+@onready var recruta = get_node("/root/World/player")
 # Called when the node enters the scene tree for the first time.
 func _ready():
 	pass # Replace with function body.
@@ -16,4 +16,5 @@ func _on_body_entered(_body):
 
 
 func _on_anim_animation_finished():
+	recruta.coin_count += 1
 	queue_free()

@@ -1,14 +1,20 @@
-[gd_scene load_steps=3 format=3 uid="uid://fcpqdwgw8owf"]
+[gd_scene load_steps=4 format=3 uid="uid://fcpqdwgw8owf"]
 
 [ext_resource type="Script" path="res://scripts/CameraFlip.gd" id="1_ngm21"]
+[ext_resource type="PackedScene" uid="uid://bo2wxsiwuuj3d" path="res://actors/Camera flip wall.tscn" id="2_arpdu"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_8jakw"]
-size = Vector2(16, 200)
+size = Vector2(32, 192)
 
 [node name="Flip Zone" type="Area2D"]
+collision_layer = 2
 script = ExtResource("1_ngm21")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(24, 0)
 shape = SubResource("RectangleShape2D_8jakw")
 
-[connection signal="body_entered" from="." to="." method="CameraFlipGaming"]
+[node name="Wall" parent="." instance=ExtResource("2_arpdu")]
+position = Vector2(16, 0)
+
+[connection signal="body_entered" from="." to="." method="_on_right_side_entered"]

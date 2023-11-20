@@ -7,11 +7,19 @@ func _ready():
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
-func _process(delta):
+func _process_(delta):
 	pass
 
 
-func _on_spike_entered(body):
+func _on_spike_entered(_body):
 	player_penguin.can_has_death = true
 	# player_penguin.bonk()
 	player_penguin.respawn()
+
+
+func undertalecospaly(body):
+	pass # Replace with function body.
+
+
+func undertalecosplay(body):
+	pass # Replace with function body.
