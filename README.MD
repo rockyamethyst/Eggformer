@@ -2,6 +2,10 @@
 <img src="/Assets/image.png" width="410"/>
 </p>
 
+PT-BR | [EN-US](docs/english.md)
+
+
+
 # <p style="text-align: center;">Finalidade:</p>
 
 Eggformer é o meu projeto para a aula de Jogos de tabuleiros e RPG, Administrada pelo professor Salmo.
