@@ -332,8 +332,7 @@ radius = 8.0
 collision_mask = 30
 safe_margin = 0.2
 script = ExtResource("1_nex0w")
-transitioner = NodePath("Transition")
-limit_right = -96
+transitioner = NodePath("Control/CanvasLayer/Transition")
 
 [node name="camera" type="Camera2D" parent="."]
 position = Vector2(16, 0)
@@ -368,14 +367,6 @@ libraries = {
 [node name="Jump" type="AudioStreamPlayer2D" parent="."]
 stream = ExtResource("7_ntcgv")
 volume_db = -14.0
-
-[node name="Transition" parent="." instance=ExtResource("22_mhlup")]
-anchors_preset = -1
-offset_left = -96.0
-offset_top = -100.0
-offset_right = 260.0
-offset_bottom = 99.0
-scene_switch = "fade_in"
 
 [node name="Control" type="Control" parent="."]
 layout_mode = 3
@@ -447,5 +438,8 @@ shape = SubResource("CircleShape2D_sxy25")
 passby_press = true
 action = "peng_jump"
 visibility_mode = 1
+
+[node name="Transition" parent="Control/CanvasLayer" instance=ExtResource("22_mhlup")]
+scene_switch = "fade_in"
 
 [connection signal="animation_finished" from="anim" to="." method="_on_anim_animation_finished"]
