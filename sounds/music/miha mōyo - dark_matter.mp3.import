@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://djay4m6wqfve7"
+path="res://.godot/imported/miha mōyo - dark_matter.mp3-1f5854115d7026b043a683b2eb15fce6.mp3str"
+
+[deps]
+
+source_file="res://sounds/music/miha mōyo - dark_matter.mp3"
+dest_files=["res://.godot/imported/miha mōyo - dark_matter.mp3-1f5854115d7026b043a683b2eb15fce6.mp3str"]
+
+[params]
+
+loop=true
+loop_offset=0.0
+bpm=0.0
+beat_count=0
+bar_beats=4

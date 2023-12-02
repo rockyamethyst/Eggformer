@@ -13,7 +13,7 @@
 [ext_resource type="Texture2D" uid="uid://bn2hxkdl48w8r" path="res://Assets/image.png" id="11_h8wef"]
 [ext_resource type="PackedScene" uid="uid://vq54cqsxnuri" path="res://actors/Transition.tscn" id="12_yckk2"]
 [ext_resource type="PackedScene" uid="uid://1oacpikk2nuc" path="res://levels/level1.tscn" id="13_vvxr3"]
-[ext_resource type="AudioStream" uid="uid://b84htii0bg6q1" path="res://sounds/music/Another Winter.mp3" id="14_hxbot"]
+[ext_resource type="AudioStream" uid="uid://c22ppc4y6catj" path="res://sounds/music/Rolemusic - 37 ohmperios.mp3" id="14_iybe4"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_eo65x"]
 size = Vector2(30, 14)
@@ -127,7 +127,7 @@ layout_mode = 2
 scene_to_load = ExtResource("13_vvxr3")
 
 [node name="Title SOng" type="AudioStreamPlayer" parent="."]
-stream = ExtResource("14_hxbot")
+stream = ExtResource("14_iybe4")
 autoplay = true
 
 [connection signal="pressed" from="QuitButtonPCJANKYYY" to="." method="_on_quit_button_pressed"]
