@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://v0bu2l57p3h7"
+path="res://.godot/imported/Rolemusic - The River.mp3-c92069f708d88bd07ddb7300f1fe8ad4.mp3str"
+
+[deps]
+
+source_file="res://sounds/music/Rolemusic - The River.mp3"
+dest_files=["res://.godot/imported/Rolemusic - The River.mp3-c92069f708d88bd07ddb7300f1fe8ad4.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

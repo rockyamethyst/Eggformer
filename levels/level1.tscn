@@ -1,7 +1,8 @@
-[gd_scene load_steps=18 format=3 uid="uid://1oacpikk2nuc"]
+[gd_scene load_steps=19 format=3 uid="uid://1oacpikk2nuc"]
 
-[ext_resource type="AudioStream" uid="uid://2xt5u7imqen8" path="res://sounds/music/octobernightballad.mp3" id="1_8mabw"]
+[ext_resource type="AudioStream" uid="uid://b5a5vohvbxiyv" path="res://sounds/music/Rhapsody - A Morbid Curiosity (Chiptune Version).mp3" id="1_0uo5p"]
 [ext_resource type="TileSet" uid="uid://cc14216okipdx" path="res://levels/level 1 tileset.tres" id="2_ci27u"]
+[ext_resource type="AudioStream" uid="uid://l4rcdxeuyspl" path="res://sounds/music/sawsquarenoise - Boss Splash.mp3" id="2_erfjx"]
 [ext_resource type="PackedScene" uid="uid://dieubypn3kivl" path="res://actors/spikes.tscn" id="6_0hsvk"]
 [ext_resource type="PackedScene" uid="uid://bqjfjlj5dp7qa" path="res://actors/oilpool.tscn" id="6_10080"]
 [ext_resource type="PackedScene" uid="uid://c17s08avim8l5" path="res://actors/iceblocks.tscn" id="7_npksb"]
@@ -26,9 +27,12 @@ size = Vector2(16, 112)
 metadata/_edit_vertical_guides_ = []
 
 [node name="levelsong" type="AudioStreamPlayer" parent="."]
-stream = ExtResource("1_8mabw")
-volume_db = -13.0
+stream = ExtResource("1_0uo5p")
+volume_db = -3.0
 autoplay = true
+
+[node name="victory" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("2_erfjx")
 
 [node name="tilemap" type="TileMap" parent="."]
 texture_filter = 1
@@ -337,7 +341,7 @@ position = Vector2(3416, 56)
 shape = SubResource("RectangleShape2D_jh3j4")
 
 [node name="player" parent="." instance=ExtResource("10_5npjs")]
-position = Vector2(-33.8601, 151.858)
+position = Vector2(-32, 152)
 collision_mask = 14
 scene_to_load = ExtResource("14_8fgqa")
 hard_mode_scene_to_load = ExtResource("14_ktb16")
