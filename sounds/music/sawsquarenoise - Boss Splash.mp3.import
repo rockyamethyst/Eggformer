@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://l4rcdxeuyspl"
+path="res://.godot/imported/sawsquarenoise - Boss Splash.mp3-592c8363cfe811a1aaf99049e35cc3f9.mp3str"
+
+[deps]
+
+source_file="res://sounds/music/sawsquarenoise - Boss Splash.mp3"
+dest_files=["res://.godot/imported/sawsquarenoise - Boss Splash.mp3-592c8363cfe811a1aaf99049e35cc3f9.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

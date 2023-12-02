@@ -4,8 +4,8 @@
 [ext_resource type="PackedScene" uid="uid://di05b8wefwdn1" path="res://actors/player.tscn" id="2_y3nua"]
 [ext_resource type="Texture2D" uid="uid://ckosj0j5yd0uk" path="res://Assets/Seasonal Tilesets/4 - Winter World/Background parts/3 - Big_mountain_BG.png" id="4_t8tye"]
 [ext_resource type="Texture2D" uid="uid://1di3o7jecc1j" path="res://Assets/Seasonal Tilesets/4 - Winter World/Background parts/2 - Smaller_mountains.png" id="5_w4uec"]
-[ext_resource type="AudioStream" uid="uid://bonuo212mgqq1" path="res://sounds/music/Tempest - Acidjazzed Evening (FADE).mp3" id="6_76n6m"]
 [ext_resource type="Texture2D" uid="uid://cadwrpbhcc2v3" path="res://Assets/Seasonal Tilesets/4 - Winter World/Background parts/1 - Snowy_foreground_area.png" id="6_jtouj"]
+[ext_resource type="AudioStream" uid="uid://djay4m6wqfve7" path="res://sounds/music/miha mōyo - dark_matter.mp3" id="6_oe8h6"]
 [ext_resource type="PackedScene" uid="uid://fcpqdwgw8owf" path="res://actors/CameraFlippies.tscn" id="8_3ajlv"]
 [ext_resource type="PackedScene" uid="uid://dieubypn3kivl" path="res://actors/spikes.tscn" id="8_05ggw"]
 
@@ -343,7 +343,7 @@ layer_1/tile_data = PackedInt32Array(393230, 262144, 6, 327694, 262144, 5, 26215
 position = Vector2(-104, -80)
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
-stream = ExtResource("6_76n6m")
+stream = ExtResource("6_oe8h6")
 volume_db = -9.0
 autoplay = true
 
