@@ -337,11 +337,9 @@ transitioner = NodePath("Control/CanvasLayer/Transition")
 [node name="camera" type="Camera2D" parent="."]
 position = Vector2(16, 0)
 zoom = Vector2(2, 2)
-limit_left = -96
 limit_smoothed = true
 position_smoothing_enabled = true
 editor_draw_limits = true
-metadata/_edit_lock_ = true
 
 [node name="anim" type="AnimatedSprite2D" parent="."]
 light_mask = 2
@@ -376,6 +374,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 0
+size_flags_horizontal = 3
 
 [node name="CanvasLayer" type="CanvasLayer" parent="Control"]
 layer = 4

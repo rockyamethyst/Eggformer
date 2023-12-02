@@ -15,10 +15,11 @@ const JUMP_VELOCITY = -250.0
 @export var limit_of_right_map = 0
 @export var limit_of_left_map = 0
 @export var awaken = 1
-var is_flippin = 0
-var LeftSideOfMap = -1
+@export var is_flippin = false
+@export var LeftSideOfMap = -1
+@export var spawn_direction = 1
 var is_finished = 0
-var can_has_death := false
+var can_has_death := true
 var deceleration = 30
 var gravity = ProjectSettings.get_setting("physics/2d/default_gravity")
 var is_sliding = 0
@@ -36,6 +37,7 @@ var coin_count = 0
 func _ready():
 	$camera.limit_left = base_limit 
 	$camera.limit_right = limit_of_right_map
+	recruta.scale.x = spawn_direction
 
 func undertalecosplay(_body):
 	can_has_death = true
@@ -158,7 +160,7 @@ func _process(delta):
 		velocity.x = SPEED * slide_direction
 		move_and_slide()
 	# print_debug("Coins: ", coin_count)
-	if is_flippin == 1:
+	if is_flippin:
 		if LeftSideOfMap == -1:
 			$camera.limit_left = limit_of_left_map
 			$camera.limit_right = base_limit
