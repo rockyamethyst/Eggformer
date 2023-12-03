@@ -18,6 +18,8 @@ const JUMP_VELOCITY = -250.0
 @export var is_flippin = false
 @export var LeftSideOfMap = -1
 @export var spawn_direction = 1
+@onready var level_song = $"../levelsong"
+@onready var victory_song = $"../victory"
 var is_finished = 0
 var can_has_death := true
 var deceleration = 30
@@ -154,7 +156,9 @@ func YES_I_KNOW_ITS_JANK_BUT_IT_WILL_DO(_body):
 func _process(delta):
 	if is_on_floor() and is_finished == 1:
 		recruta.play("victory")
-		print_debug("DANCE MY BOY")
+		if !victory_song.is_playing():
+			level_song.playing = false
+			victory_song.play()
 	elif is_on_floor() and is_finished == 69:
 		recruta.play("walk")
 		velocity.x = SPEED * slide_direction
