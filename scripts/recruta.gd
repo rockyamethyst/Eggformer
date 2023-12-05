@@ -14,14 +14,13 @@ const JUMP_VELOCITY = -250.0
 @export var base_limit = 0
 @export var limit_of_right_map = 0
 @export var limit_of_left_map = 0
-@export var awaken = 1
+@export var has_to_awaken := true
 @export var is_flippin = false
 @export var LeftSideOfMap = -1
 @export var spawn_direction = 1
-@onready var level_song = $"../levelsong"
+@onready var level_song = $"../levelsong" # YES YES I KNOW THIS IS HARDCODED, I'M READY TO BE AN AAA DEVELOPER LOL
 @onready var victory_song = $"../victory"
 var is_finished = 0
-var can_has_death := true
 var deceleration = 30
 var gravity = ProjectSettings.get_setting("physics/2d/default_gravity")
 var is_sliding = 0
@@ -42,7 +41,7 @@ func _ready():
 	recruta.scale.x = spawn_direction
 
 func undertalecosplay(_body):
-	can_has_death = true
+	has_to_awaken = false
 	respawn()
 
 
@@ -52,12 +51,14 @@ func bonk():
 	velocity.x = slide_direction * 125
 	bonkd = true
 	if velocity.y == 0:
-		can_has_death = true
+		has_to_awaken = true
 		bonk()
 	
 
 
 func respawn():
+	velocity.x = 0
+	velocity.y = 0
 	if(has_checkpoint):
 		position = checkpoint_pos
 		recruta.play("respawn")
@@ -70,14 +71,14 @@ func _on_anim_animation_finished():
 		transitioner.scene_to_load = scene_to_load
 		transitioner.scene_switch = scene_switch
 		transitioner.animation_player.play("fade_out")
-	elif can_has_death:
-		can_has_death = false
+	elif has_to_awaken:
+		has_to_awaken = false
 		spawn_pos = recruta.global_position
 		return move_and_slide()
 
 
 func _physics_process(delta):
-	if can_has_death:
+	if has_to_awaken:
 		transitioner.set_next_animation(false)
 		return
 	elif is_on_floor() and is_finished:
@@ -128,8 +129,6 @@ func _physics_process(delta):
 		sliding()
 	elif is_moving:
 		recruta.play("walk")
-	elif can_has_death:
-		respawn()
 	else:
 		recruta.play("idle")
 
@@ -154,6 +153,7 @@ func YES_I_KNOW_ITS_JANK_BUT_IT_WILL_DO(_body):
 
 
 func _process(delta):
+	$CanvasLayer/Control3/score.text = str("Coins: ", coin_count)
 	if is_on_floor() and is_finished == 1:
 		recruta.play("victory")
 		if !victory_song.is_playing():
@@ -175,6 +175,7 @@ func _process(delta):
 		$camera.limit_right = limit_of_right_map
 
 
+
 func go_deeper_recruta(body):
 	is_finished = 69
 
@@ -185,3 +186,5 @@ func time_to_die(body):
 	transitioner.animation_player.play("fade_out")
 	velocity.x = 0
 	recruta.play("idle")
+
+

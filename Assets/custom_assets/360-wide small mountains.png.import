@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://c402r3887uan1"
-path="res://.godot/imported/-3ttumk.jpg-b659e8abef9be4bed9c2568bec9936e7.ctex"
+uid="uid://5g4syykd7mdi"
+path="res://.godot/imported/360-wide small mountains.png-b93e96c23295e81a3665706d3ab28f15.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/FUnny/-3ttumk.jpg"
-dest_files=["res://.godot/imported/-3ttumk.jpg-b659e8abef9be4bed9c2568bec9936e7.ctex"]
+source_file="res://Assets/custom_assets/360-wide small mountains.png"
+dest_files=["res://.godot/imported/360-wide small mountains.png-b93e96c23295e81a3665706d3ab28f15.ctex"]
 
 [params]
 

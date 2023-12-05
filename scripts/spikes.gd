@@ -12,8 +12,7 @@ func _process_(delta):
 
 
 func _on_spike_entered(_body):
-	player_penguin.can_has_death = true
-	# player_penguin.bonk()
+	player_penguin.has_to_awaken = true
 	player_penguin.respawn()
 
 

@@ -24,3 +24,5 @@ func _on_right_side_left(body):
 	wall.rotation_degrees += 180 # * recruta.LeftSideOfMap
 	wall.position.x += 16 * recruta.LeftSideOfMap # i'm making this 32 pixels and calling it a day, need to fix other things
 # this is stupidly jank, it blocks the player off if they try to bug the camera intentionally (or accidentally, if they try to do a quick turnaround, "wrong place" style.) BUT IT WILL DO. i DO NOT have brain power.
+
+

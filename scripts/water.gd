@@ -3,5 +3,5 @@ extends Area2D
 
 
 func STOP_SWIMMING(body):
-	player.can_has_death = true
+	player.has_to_awaken = true
 	player.respawn()

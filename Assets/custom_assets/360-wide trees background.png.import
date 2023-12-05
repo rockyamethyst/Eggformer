@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bxlql8ui7xxwh"
-path="res://.godot/imported/0782c28e3fbbcc223346c3d0f269340c04f0186c_full.jpg-c27b0838c6c7052aa99339589ecab207.ctex"
+uid="uid://ppbrnowgsv66"
+path="res://.godot/imported/360-wide trees background.png-27433b722836bc07aca64fc325e6d5fc.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/FUnny/0782c28e3fbbcc223346c3d0f269340c04f0186c_full.jpg"
-dest_files=["res://.godot/imported/0782c28e3fbbcc223346c3d0f269340c04f0186c_full.jpg-c27b0838c6c7052aa99339589ecab207.ctex"]
+source_file="res://Assets/custom_assets/360-wide trees background.png"
+dest_files=["res://.godot/imported/360-wide trees background.png-27433b722836bc07aca64fc325e6d5fc.ctex"]
 
 [params]
 
