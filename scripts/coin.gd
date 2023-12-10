@@ -13,8 +13,9 @@ func _process(_delta):
 
 func _on_body_entered(_body):
 	texture.play("collect")
-	recruta.coin_count += 1
+	
 
 
 func _on_anim_animation_finished():
+	recruta.coin_count += 1
 	queue_free()

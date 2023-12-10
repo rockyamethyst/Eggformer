@@ -12,7 +12,7 @@
 [ext_resource type="Texture2D" uid="uid://074ynr8bg8r0" path="res://Assets/Mini FX, Items & UI/GUIButtons/Start Button Text.png" id="10_0nl6g"]
 [ext_resource type="Texture2D" uid="uid://bn2hxkdl48w8r" path="res://Assets/image.png" id="11_h8wef"]
 [ext_resource type="PackedScene" uid="uid://vq54cqsxnuri" path="res://actors/Transition.tscn" id="12_yckk2"]
-[ext_resource type="PackedScene" uid="uid://1oacpikk2nuc" path="res://levels/level1.tscn" id="13_vvxr3"]
+[ext_resource type="PackedScene" uid="uid://1oacpikk2nuc" path="res://levels/level1.tscn" id="13_5u2wn"]
 [ext_resource type="AudioStream" uid="uid://c22ppc4y6catj" path="res://sounds/music/Rolemusic - 37 ohmperios.mp3" id="14_iybe4"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_eo65x"]
@@ -31,22 +31,25 @@ script = ExtResource("1_law10")
 transitioner = NodePath("VBoxContainer/Transition")
 
 [node name="QuitButtonPCJANKYYY" type="Button" parent="."]
+modulate = Color(1, 1, 1, 0)
 layout_mode = 0
 offset_left = 285.0
 offset_top = 260.0
-offset_right = 357.0
-offset_bottom = 295.0
+offset_right = 356.0
+offset_bottom = 291.0
 text = "⠀⠀⠀⠀⠀"
 
 [node name="OptionsButtonPCJANKYYY" type="Button" parent="."]
+modulate = Color(1, 1, 1, 0)
 layout_mode = 0
 offset_left = 284.0
 offset_top = 213.0
-offset_right = 356.0
-offset_bottom = 248.0
+offset_right = 355.0
+offset_bottom = 244.0
 text = "⠀⠀⠀⠀⠀"
 
 [node name="StartButtonPCJANKYYY" type="Button" parent="."]
+modulate = Color(1, 1, 1, 0)
 layout_mode = 0
 offset_left = 284.0
 offset_top = 164.0
@@ -124,7 +127,7 @@ texture = ExtResource("11_h8wef")
 
 [node name="Transition" parent="VBoxContainer" instance=ExtResource("12_yckk2")]
 layout_mode = 2
-scene_to_load = ExtResource("13_vvxr3")
+scene_to_load = ExtResource("13_5u2wn")
 
 [node name="Title SOng" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("14_iybe4")

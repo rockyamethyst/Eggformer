@@ -36,9 +36,13 @@ var coin_count = 0
 
 
 func _ready():
+	transitioner.set_next_animation(false)
 	$camera.limit_left = base_limit 
 	$camera.limit_right = limit_of_right_map
 	recruta.scale.x = spawn_direction
+	if !has_to_awaken:
+		spawn_pos = recruta.global_position
+		return move_and_slide()
 
 func undertalecosplay(_body):
 	has_to_awaken = false
@@ -79,7 +83,6 @@ func _on_anim_animation_finished():
 
 func _physics_process(delta):
 	if has_to_awaken:
-		transitioner.set_next_animation(false)
 		return
 	elif is_on_floor() and is_finished:
 		return
@@ -118,8 +121,9 @@ func _physics_process(delta):
 			velocity.x = SPEED * direction
 			recruta.scale.x = direction
 			slide_direction = direction
+
 			$camera.position.x = direction * 16  
-	# print_debug("Vertical: ", velocity.y, "Horizontal: ", velocity.x)
+	print_debug("Vertical: ", velocity.y, "Horizontal: ", velocity.x)
 
 
 
@@ -173,10 +177,12 @@ func _process(delta):
 		LeftSideOfMap = -1
 		$camera.limit_left = base_limit
 		$camera.limit_right = limit_of_right_map
+		
 
 
 
 func go_deeper_recruta(body):
+	print_debug("huh")
 	is_finished = 69
 
 

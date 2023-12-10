@@ -26,3 +26,6 @@ func _on_right_side_left(body):
 # this is stupidly jank, it blocks the player off if they try to bug the camera intentionally (or accidentally, if they try to do a quick turnaround, "wrong place" style.) BUT IT WILL DO. i DO NOT have brain power.
 
 
+
+
+
